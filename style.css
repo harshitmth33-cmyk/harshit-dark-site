@@ -1,0 +1,94 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: black;
+  color: white;
+  overflow-x: hidden;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.hero {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(0.35) contrast(1.2);
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background:
+    linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.2)),
+    rgba(0,0,0,0.4);
+}
+
+.content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  font-family: 'Anton', sans-serif;
+  font-size: clamp(4rem, 12vw, 10rem);
+  letter-spacing: 10px;
+  text-shadow:
+    0 0 10px rgba(255,255,255,0.4),
+    0 0 40px rgba(255,255,255,0.2);
+}
+
+.subtitle {
+  margin-top: 10px;
+  font-size: 1rem;
+  letter-spacing: 8px;
+}
+
+.line {
+  width: 220px;
+  height: 2px;
+  background: white;
+  margin: 25px 0;
+}
+
+.enter-btn {
+  padding: 14px 40px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  font-size: 0.9rem;
+  letter-spacing: 4px;
+}
+
+.about {
+  min-height: 100vh;
+  background: #050505;
+  padding: 100px 10%;
+}
+
+.noise {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+}
